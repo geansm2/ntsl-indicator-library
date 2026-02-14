@@ -4,14 +4,14 @@
 
 ## Indicadores Incluídos
 
-- **HTF Panel** – Exibe candles de timeframe maior em gráficos de timeframe menor (ex.: candles de 15m no gráfico de 1m, candles de 1h no gráfico de 15m).  
-- *(Adicione novos indicadores em pastas separadas à medida que forem criados.)*
+- **HTF_Candle_Sobreposto** – Exibe candles de timeframe maior em gráficos de timeframe menor
+  (ex.: candles de 15m no gráfico de 1m utilizando multiplos de 15, candles de 1h no gráfico de 15m utilizando multiplos de 4).  
 
 ## Uso
 
-1. Copie o arquivo `.ntsl` para a pasta de indicadores do ProfitPro.  
-2. Reinicie o ProfitPro ou recarregue os indicadores.  
-3. Aplique o indicador no gráfico desejado.  
+1. Copie o arquivo `.psf` para a seu computador e carrege o arquivo no aplicativo do ProfitPro.  
+2. Talvez seja preciso reiniciear o ProfitPro ou recarregue os indicadores adicionando ele através da biblioteca de indicadores.  
+3. Aplique o indicador no gráfico desejado e não esqueça de indicar o multiplo adequado.   
 
 ## Observações
 
