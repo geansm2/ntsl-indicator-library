@@ -1,0 +1,81 @@
+// =============================================
+// Indicador: HTF 15min sobreposição Manual (sobre 1min)
+// Plota candle de 15 minutos acumulando as últimas 15 barras de 1min
+// Autor: Gean Machado
+// =============================================
+
+Input
+    TF_Multiplo(15);           // Quantas barras de 1min = 1 candle maior (15 = 15min)
+    CorCorpoAlta(clLime);      // Corpo de alta
+    CorCorpoBaixa(clRed);      // Corpo de baixa
+    CorWick(clWhite);          // Wick / borda
+    MostrarApenasFechado(true); // true = plota só quando bloco fecha | false = atualiza em tempo real
+
+Var
+    HTF_Open   : Float;
+    HTF_High   : Float;
+    HTF_Low    : Float;
+    HTF_Close  : Float;
+
+    ContadorBloco     : Integer;
+    CorpoCor          : Integer;   // movido para cá (não pode declarar dentro de if)
+
+begin
+    // Reset simples no início de novo dia (mais seguro e comum no NTSL)
+    if Date <> Date[1] then
+    begin
+        ContadorBloco := 0;
+        HTF_High := Low;    // valores iniciais seguros para evitar lixo
+        HTF_Low  := High;
+    end;
+
+    // Incrementa contador a cada nova barra de 1min
+    ContadorBloco := ContadorBloco + 1;
+
+    // Primeira barra do bloco: define Open e inicia High/Low
+    if ContadorBloco = 1 then
+    begin
+        HTF_Open  := Open;
+        HTF_High  := High;
+        HTF_Low   := Low;
+        HTF_Close := Close;
+    end
+    else
+    begin
+        // Atualiza durante o bloco
+        if High > HTF_High then HTF_High := High;
+        if Low  < HTF_Low  then HTF_Low  := Low;
+        HTF_Close := Close;  // atualiza sempre (para candle em formação)
+    end;
+
+    // Bloco completou?
+    if ContadorBloco >= TF_Multiplo then
+    begin
+        // Decide cor do corpo
+        if HTF_Close >= HTF_Open then
+            CorpoCor := CorCorpoAlta
+        else
+            CorpoCor := CorCorpoBaixa;
+
+        // Plota (só se permitido pelo input)
+        if (not MostrarApenasFechado) or (ContadorBloco = TF_Multiplo) then
+        begin
+            PlotCandle(
+                HTF_Open,
+                HTF_High,
+                HTF_Low,
+                HTF_Close,
+                CorpoCor,     // cor do corpo
+                CorpoCor,     // cor da "sombra" (wick) - pode mudar se quiser wick diferente
+                CorWick       // cor da borda
+            );
+        end;
+
+        // Reseta para próximo bloco
+        ContadorBloco := 0;
+    end;
+
+    // Debug opcional (descomente para testar)
+    // PlotText(0, clYellow, 10, "Bloco: " + NumToStr(ContadorBloco,0) + " HTF Close: " + NumToStr(HTF_Close,2));
+
+end;
