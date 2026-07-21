@@ -1,6 +1,6 @@
-# Order Flow Imbalance (OFI Quant) - Manual do Indicador
+# Order Flow Imbalance (OFI) - Manual do Indicador
 
-O **OFI Quant** é um indicador avançado de Microestrutura de Mercado que traduz o fluxo invisível do Livro de Ofertas (Level 1) em um formato visual intuitivo. Diferente de indicadores tradicionais que rastreiam o passado (preço fechado), o OFI rastreia a **intenção futura**, medindo o desequilíbrio entre a entrada e o cancelamento de ordens de limite.
+O **OFI** é um indicador avançado de Microestrutura de Mercado que traduz o fluxo invisível do Livro de Ofertas (Level 1) em um formato visual intuitivo. Diferente de indicadores tradicionais que rastreiam o passado (preço fechado), o OFI rastreia a **intenção futura**, medindo o desequilíbrio entre a entrada e o cancelamento de ordens de limite.
 
 ---
 
