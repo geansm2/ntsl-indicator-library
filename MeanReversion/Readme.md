@@ -45,6 +45,8 @@ Para adaptar o modelo teórico acadêmico a um ambiente de execução real em al
 * Para evitar *false breakouts* ou entradas contra a tendência em momentos de baixa estacionariedade, o código calcula o tempo meio da reversão ($\text{Half-Life} = \frac{\ln(2)}{\alpha}$). Se o Half-Life exceder o limite aceitável (`InpMaxHalfLifeBars`), as bandas são desativadas temporariamente.
 
 ---
+### Versão PROFITPRO - NELOGIA
+Ainda em desenvolvimento devido a limitações de formulas e cálculos matemático limitado pela linguagem de progração.
 
 ## 🛠️ Arquivos do Repositório
 
