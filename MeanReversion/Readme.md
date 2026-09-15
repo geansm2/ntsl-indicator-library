@@ -7,6 +7,7 @@ Este diretório contém a implementação quantitativa do indicador de reversão
 A arquitetura teórica deste indicador é baseada no artigo científico:
 
 > **Amaral, Lucas Rabechini (2026).** *Optimal Trading of Microstructure Mean Reversion*.
+> https://arxiv.org/abs/2608.00885
 
 ### Conceito Científico
 No nível de microestrutura de mercado, o preço médio (*mid price*) oscila em torno de um **preço eficiente latente** ($X_t$). O desvio entre o preço observado e o valor de equilíbrio é definido pelo **Gap** ($G_t = M_t - X_t$), que exibe uma forte propriedade de reversão à média estacionária modelada por um processo **Ornstein-Uhlenbeck (OU)**.
