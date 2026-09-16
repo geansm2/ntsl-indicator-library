@@ -43,6 +43,7 @@ Para adaptar o modelo teórico acadêmico a um ambiente de execução real em al
 
 ### 4. Filtro de Qualidade por *Half-Life*
 * Para evitar *false breakouts* ou entradas contra a tendência em momentos de baixa estacionariedade, o código calcula o tempo meio da reversão ($\text{Half-Life} = \frac{\ln(2)}{\alpha}$). Se o Half-Life exceder o limite aceitável (`InpMaxHalfLifeBars`), as bandas são desativadas temporariamente.
+<img width="1366" height="727" alt="image" src="https://github.com/user-attachments/assets/814ba56a-ca0a-459f-ba73-1326eb4fdae4" />
 
 ---
 ### Versão PROFITPRO - NELOGIA
