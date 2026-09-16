@@ -51,6 +51,7 @@ Ainda em desenvolvimento devido a limitações de formulas e cálculos matemáti
 ## 🛠️ Arquivos do Repositório
 
 * `MicrostructureMeanReversion_Quant.mq5`: Código fonte do indicador em MQL5.
+* `Retorno_meida.ntsl`: Para o ProfitPro - Nelogica, ainda em desenvolvimento.
 * `README.md`: Documentação técnica.
 
 ---
