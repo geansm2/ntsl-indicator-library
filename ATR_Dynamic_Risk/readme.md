@@ -5,6 +5,7 @@ O **Dynamic Risk ATR Map** é um indicador técnico focado em análise de volati
 O indicador calcula e projeta linhas de stop dinâmicas (níveis de invalidação para compra e venda) ajustadas continuamente ao regime de volatilidade do mercado, além de identificar suportes e resistências estruturais e sinalizar a direção do momento por meio de coloração baseada em **Momentum Relativo (normalizado por ATR)**.
 
 ---
+<img width="1362" height="673" alt="image" src="https://github.com/user-attachments/assets/0837d7fd-8333-4239-96ed-0fb0c04dda5e" />
 
 ## Principais Funcionalidades
 
