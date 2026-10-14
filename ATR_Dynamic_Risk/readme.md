@@ -36,15 +36,32 @@ $$dATR = ATR \times K_{\text{final}}$$
 *Se a volatilidade se expande, a distância do stop aumenta para evitar saídas prematuras; durante momentos de baixa volatilidade, o nível de stop se aproxima do preço.*
 
 ### 2. Níveis de Invalidação Estruturais (Stop Compra e Venda)
-O cálculo das linhas de invalidação considera as máximas e mínimas do período determinado ($N$), somadas a um buffer proporcional ao ATR ($\text{Buffer} = ATR \times \text{InpStructureBuffer}$):
 
-* **Distância do Stop de Compra ($d_{\text{Buy}}$)**:
-  $$d_{\text{Buy}} = \max\left(dATR, \text{Preço} - (\text{Mínima}_{N} - \text{Buffer})\right)$$
-  $$\text{Stop Compra} = \text{Preço} - d_{\text{Buy}}$$
+O cálculo das linhas de invalidação considera as máximas e mínimas do período \(N\), acrescidas de um buffer proporcional ao ATR:
 
-* **Distância do Stop de Venda ($d_{\text{Sell}}$)**:
-  $$d_{\text{Sell}} = \max\left(dATR, (\text{Máxima}_{N} + \text{Buffer}) - \text{Preço}\right)$$
-  $$\text{Stop Venda} = \text{Preço} + d_{\text{Sell}}$$
+$$
+\text{Buffer} = ATR \times \text{InpStructureBuffer}
+$$
+
+**Distância do Stop de Compra (\(d_{\text{Buy}}\)):**
+
+$$
+d_{\text{Buy}} = \max\left(dATR,\ \text{Preço} - \left(\text{Mínima}_{N} - \text{Buffer}\right)\right)
+$$
+
+$$
+\text{Stop Compra} = \text{Preço} - d_{\text{Buy}}
+$$
+
+**Distância do Stop de Venda (\(d_{\text{Sell}}\)):**
+
+$$
+d_{\text{Sell}} = \max\left(dATR,\ \left(\text{Máxima}_{N} + \text{Buffer}\right) - \text{Preço}\right)
+$$
+
+$$
+\text{Stop Venda} = \text{Preço} + d_{\text{Sell}}
+$$
 
 ### 3. Momentum Normalizado em ATR (Coloração)
 O momentum mede o deslocamento do preço atual em relação ao fechamento de $K$ candles passados, medido em múltiplos do ATR atual:
