@@ -52,13 +52,9 @@ $$\text{VWAP}_{\text{flow}}(t) = \frac{\int_{0}^{P} p \, V(p, t) \, dp}{\int_{0}
 
 Resolvendo as integrais analíticas padrão e reajustando para o preço absoluto do gráfico somando-se o piso ($P_{\text{piso}}$), obtém-se a expressão fechada final:
 
-$$\operatorname{VWAP}_{\text{flow}}(t)=P_{\text{piso}}+
-\frac{P}{2}
-\frac{\displaystyle\sum_{n=1}^{N}
-\frac{(-1)^{n+1}}{n}A_n e^{-\kappa(n\pi/P)^2t}}
-{\displaystyle\sum_{\substack{n=1\\n\text{ ímpar}}}^{N}
-\frac{1}{n}A_n e^{-\kappa(n\pi/P)^2t}}$$
-
+$$
+\text{VWAP}_{\text{flow}}(t) = P_{\text{piso}} + \frac{P}{2} \cdot \frac{\displaystyle \sum_{n=1}^{N} \frac{(-1)^{n+1}}{n} A_n e^{-\kappa(n\pi/P)^2 t}}{\displaystyle \sum_{\substack{n=1 \\ n \text{ ímpar}}}^{N} \frac{1}{n} A_n e^{-\kappa(n\pi/P)^2 t}}
+$$
 ---
 
 ## 5. Calibração do Coeficiente de Difusão $\kappa$ (Kappa)
